@@ -1,0 +1,80 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN9WmX4sEKVW3gvX3+mMTja",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Kajcik/Data-Science/blob/main/loteria\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "nzSqAb9WPzSm",
+        "outputId": "372abb75-545e-4bd8-beea-1f26db124f15",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Podaj liczbę od 1 do 250: 6\n",
+            "spróbuj jeszcze raz\n"
+          ]
+        }
+      ],
+      "source": [
+        "def loteria(liczba):\n",
+        "    if liczba < 1 or liczba > 250:\n",
+        "        return \"Podaj liczbę w zakresie od 1 do 250\"\n",
+        "    elif liczba % 4 == 0 and liczba % 7 == 0:\n",
+        "        return \"duża nagroda\"\n",
+        "    elif liczba % 4 == 0:\n",
+        "        return \"mała nagroda\"\n",
+        "    elif liczba % 7 == 0:\n",
+        "        return \"średnia nagroda\"\n",
+        "    elif liczba == 117:\n",
+        "        return \"główna nagroda\"\n",
+        "    else:\n",
+        "        return \"spróbuj jeszcze raz\"\n",
+        "\n",
+        "# Przykład użycia:\n",
+        "liczba = int(input(\"Podaj liczbę od 1 do 250: \"))\n",
+        "wynik = loteria(liczba)\n",
+        "print(wynik)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "mNj3PyJ5y8I1"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
